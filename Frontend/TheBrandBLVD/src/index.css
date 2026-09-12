@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+
+
+.nav-link {
+  @apply text-[11px] font-medium uppercase tracking-[0.18em] text-black transition-opacity duration-300 hover:opacity-50;
+}
+
+.mobile-link {
+  @apply py-4 text-sm font-medium uppercase tracking-[0.18em] text-black;
+}
