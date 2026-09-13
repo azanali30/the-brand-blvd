@@ -9,18 +9,21 @@ export interface AuthRequest extends Request {
 }
 
 export const protect = (
-  req: AuthRequest,
+  req: Request,
   res: Response,
   next: NextFunction
-) => {
+): void => {
   try {
+    const authReq = req as AuthRequest;
+
     const token = req.cookies?.token;
 
     if (!token) {
-      return res.status(401).json({
+      res.status(401).json({
         success: false,
         message: "Not authenticated",
       });
+      return;
     }
 
     const decoded = jwt.verify(
@@ -31,16 +34,17 @@ export const protect = (
       role: "customer" | "admin";
     };
 
-    req.user = {
+    authReq.user = {
       userId: decoded.userId,
       role: decoded.role,
     };
 
     next();
   } catch (error) {
-    return res.status(401).json({
+    res.status(401).json({
       success: false,
       message: "Invalid or expired token",
     });
+    return;
   }
 };

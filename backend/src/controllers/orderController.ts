@@ -1,4 +1,4 @@
-import { Response } from "express";
+import { Request, Response } from "express";
 import mongoose from "mongoose";
 import Order from "../models/Order";
 import Cart from "../models/Cart";
@@ -10,11 +10,12 @@ import { io } from "../server";
 // CREATE ORDER
 // ==========================================
 export const createOrder = async (
-  req: AuthRequest,
+  req: Request,
   res: Response
 ) => {
   try {
-    const userId = req.user?.userId;
+    const authReq = req as AuthRequest;
+    const userId = authReq.user?.userId;
 
     if (!userId) {
       return res.status(401).json({
@@ -278,11 +279,12 @@ export const createOrder = async (
 // GET MY ORDERS
 // ==========================================
 export const getMyOrders = async (
-  req: AuthRequest,
+  req: Request,
   res: Response
 ) => {
   try {
-    const userId = req.user?.userId;
+    const authReq = req as AuthRequest;
+    const userId = authReq.user?.userId;
 
     if (!userId) {
       return res.status(401).json({
@@ -316,12 +318,13 @@ export const getMyOrders = async (
 // GET SINGLE ORDER
 // ==========================================
 export const getOrderById = async (
-  req: AuthRequest,
+  req: Request,
   res: Response
 ) => {
   try {
-    const userId = req.user?.userId;
-    const { id } = req.params;
+    const authReq = req as AuthRequest;
+    const userId = authReq.user?.userId;
+    const id = String(req.params.id);
 
     if (!userId) {
       return res.status(401).json({
@@ -367,12 +370,13 @@ export const getOrderById = async (
 // CANCEL ORDER
 // ==========================================
 export const cancelOrder = async (
-  req: AuthRequest,
+  req: Request,
   res: Response
 ) => {
   try {
-    const userId = req.user?.userId;
-    const { id } = req.params;
+    const authReq = req as AuthRequest;
+    const userId = authReq.user?.userId;
+    const id = String(req.params.id);
 
     if (!userId) {
       return res.status(401).json({
@@ -482,14 +486,16 @@ export const cancelOrder = async (
 // ADMIN - GET ALL ORDERS
 // ==========================================
 export const getAllOrders = async (
-  req: AuthRequest,
+  req: Request,
   res: Response
 ) => {
   try {
+    const authReq = req as AuthRequest;
+
     // ------------------------------------------
     // Admin only
     // ------------------------------------------
-    if (req.user?.role !== "admin") {
+    if (authReq.user?.role !== "admin") {
       return res.status(403).json({
         success: false,
         message: "Admin access required",
@@ -516,29 +522,24 @@ export const getAllOrders = async (
   }
 };
 
-// ==========================================
-// ADMIN - UPDATE ORDER STATUS
-// ==========================================
-// ==========================================
-// ADMIN - UPDATE ORDER
-// ==========================================
 export const updateOrder = async (
-  req: AuthRequest,
+  req: Request,
   res: Response
 ): Promise<any> => {
   try {
+    const authReq = req as AuthRequest;
+
     // ------------------------------------------
     // Admin only
     // ------------------------------------------
-    if (req.user?.role !== "admin") {
+    if (authReq.user?.role !== "admin") {
       return res.status(403).json({
         success: false,
         message: "Admin access required",
       });
     }
 
-    const { id } = req.params;
-
+    const id = String(req.params.id);
     const {
       orderStatus,
       paymentStatus,

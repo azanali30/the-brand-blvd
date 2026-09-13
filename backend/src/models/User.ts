@@ -6,6 +6,8 @@ export interface IUser extends Document {
   password?: string;
   googleId?: string;
   role: "customer" | "admin";
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 const userSchema = new Schema<IUser>(

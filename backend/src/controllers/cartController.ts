@@ -1,11 +1,13 @@
-import { Response } from "express";
+import { Response, Request } from "express";
 import Cart from "../models/Cart";
 import Product from "../models/Product";
 import { AuthRequest } from "../middleware/authMiddleware";
 
-export const addToCart = async (req: AuthRequest, res: Response) => {
+
+export const addToCart = async (req: Request, res: Response) => {
   try {
-    const userId = req.user?.userId;
+    const authReq = req as AuthRequest;
+    const userId = authReq.user?.userId;
 
     if (!userId) {
       return res.status(401).json({
@@ -40,12 +42,23 @@ export const addToCart = async (req: AuthRequest, res: Response) => {
       });
     }
 
-    if (product.stock < quantity) {
-      return res.status(400).json({
-        success: false,
-        message: "Not enough stock available",
-      });
-    }
+    const selectedVariant = product.variants.find(
+  (variant) => variant.size === size
+);
+
+if (!selectedVariant) {
+  return res.status(400).json({
+    success: false,
+    message: "Selected size is not available",
+  });
+}
+
+if (selectedVariant.stock < quantity) {
+  return res.status(400).json({
+    success: false,
+    message: "Not enough stock available",
+  });
+}
 
     let cart = await Cart.findOne({ user: userId });
 
@@ -72,12 +85,12 @@ export const addToCart = async (req: AuthRequest, res: Response) => {
       if (existingItem) {
         const newQuantity = existingItem.quantity + quantity;
 
-        if (newQuantity > product.stock) {
-          return res.status(400).json({
-            success: false,
-            message: "Not enough stock available",
-          });
-        }
+        if (newQuantity > selectedVariant.stock) {
+  return res.status(400).json({
+    success: false,
+    message: "Not enough stock available",
+  });
+}
 
         existingItem.quantity = newQuantity;
       } else {
@@ -112,9 +125,10 @@ export const addToCart = async (req: AuthRequest, res: Response) => {
 };
 
 
-export const getCart = async (req: AuthRequest, res: Response) => {
+export const getCart = async (req: Request, res: Response) => {
   try {
-    const userId = req.user?.userId;
+    const authReq = req as AuthRequest;
+    const userId = authReq.user?.userId;  
 
     if (!userId) {
       return res.status(401).json({
@@ -151,11 +165,12 @@ export const getCart = async (req: AuthRequest, res: Response) => {
 };
 
 export const updateCartItem = async (
-  req: AuthRequest,
+  req: Request,
   res: Response
 ) => {
   try {
-    const userId = req.user?.userId;
+    const authReq = req as AuthRequest;
+    const userId = authReq.user?.userId;
     const { productId } = req.params;
     const { quantity, size, color } = req.body;
 
@@ -185,12 +200,23 @@ export const updateCartItem = async (
       });
     }
 
-    if (quantity > product.stock) {
-      return res.status(400).json({
-        success: false,
-        message: "Not enough stock available",
-      });
-    }
+    const selectedVariant = product.variants.find(
+  (variant) => variant.size === size
+);
+
+if (!selectedVariant) {
+  return res.status(400).json({
+    success: false,
+    message: "Selected size is not available",
+  });
+}
+
+if (quantity > selectedVariant.stock) {
+  return res.status(400).json({
+    success: false,
+    message: "Not enough stock available",
+  });
+}
 
     const cart = await Cart.findOne({ user: userId });
 
@@ -239,11 +265,12 @@ export const updateCartItem = async (
 };
 
 export const removeCartItem = async (
-  req: AuthRequest,
+  req: Request,
   res: Response
 ) => {
   try {
-    const userId = req.user?.userId;
+    const authReq = req as AuthRequest;
+    const userId = authReq.user?.userId;
     const { productId } = req.params;
     const { size, color } = req.body;
 
@@ -308,11 +335,12 @@ export const removeCartItem = async (
 };
 
 export const clearCart = async (
-  req: AuthRequest,
+  req: Request,
   res: Response
 ) => {
   try {
-    const userId = req.user?.userId;
+    const authReq = req as AuthRequest;
+    const userId = authReq.user?.userId;
 
     if (!userId) {
       return res.status(401).json({

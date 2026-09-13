@@ -217,11 +217,12 @@ export const login = async (
 // ========================================
 
 export const getMe = async (
-  req: AuthRequest,
+  req: Request,
   res: Response
 ) => {
   try {
-    const userId = req.user?.userId;
+    const authReq = req as AuthRequest;
+    const userId = authReq.user?.userId;
 
     if (!userId) {
       return res.status(401).json({
@@ -270,11 +271,12 @@ export const getMe = async (
 // ========================================
 
 export const updateProfile = async (
-  req: AuthRequest,
+  req: Request,
   res: Response
 ) => {
   try {
-    const userId = req.user?.userId;
+    const authReq = req as AuthRequest;
+    const userId = authReq.user?.userId;
 
     if (!userId) {
       return res.status(401).json({
@@ -303,7 +305,6 @@ export const updateProfile = async (
       });
     }
 
-    // Update name
     user.name = cleanName;
 
     await user.save();
