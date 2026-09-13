@@ -525,7 +525,7 @@ export const getAllOrders = async (
 export const updateOrder = async (
   req: AuthRequest,
   res: Response
-) => {
+): Promise<any> => {
   try {
     // ------------------------------------------
     // Admin only
