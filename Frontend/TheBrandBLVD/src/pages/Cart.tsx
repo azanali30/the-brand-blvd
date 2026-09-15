@@ -98,7 +98,7 @@ const Cart = () => {
       }
 
       const response = await fetch(
-        `http://localhost:5000/api/cart/${productId}`,
+        `https://the-brand-blvd.onrender.com/api/cart/${productId}`,
         {
           method: "PUT",
           headers: {
@@ -138,7 +138,7 @@ const Cart = () => {
   ) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/cart/${productId}`,
+        `https://the-brand-blvd.onrender.com/api/cart/${productId}`,
         {
           method: "DELETE",
           headers: {
@@ -173,7 +173,7 @@ const Cart = () => {
   const clearCart = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/cart",
+        "https://the-brand-blvd.onrender.com/api/cart",
         {
           method: "DELETE",
           credentials: "include",

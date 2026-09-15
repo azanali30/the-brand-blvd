@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "6a9c2b455c3eec9c69dca419"
+  },
+  "name": "Test Customer",
+  "email": "test@example.com",
+  "password": "$2b$12$zDkPHAZgPrNn9iEz7SpzAeXLl8zX9QOkVOCp3aU/95dAEbhmO7H4i",
+  "role": "customer",
+  "createdAt": {
+    "$date": "2026-09-05T14:46:30.100Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-05T14:46:30.100Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a9c486c2e13bd9f3c3b02d1"
+  },
+  "name": "Azan Ali",
+  "email": "azan04573@gmail.com",
+  "googleId": "105265935279623490916",
+  "role": "customer",
+  "createdAt": {
+    "$date": "2026-09-05T16:50:52.542Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-05T16:50:52.542Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa3dfa4e67eb10e365d0d27"
+  },
+  "name": "Azan Ali",
+  "email": "azanali3005@gmail.com",
+  "googleId": "105788425533734180165",
+  "role": "customer",
+  "createdAt": {
+    "$date": "2026-09-11T11:01:56.365Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T11:01:56.365Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa54021f6540c1711654394"
+  },
+  "name": "Admin",
+  "email": "admin@example.com",
+  "password": "$2b$12$h1CIdd7zeAkIwJfPgH.MC.oJOK75ZNLpCh0rfvIzObj8SPfbbzfHi",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2026-09-12T12:05:53.363Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T12:05:53.363Z"
+  },
+  "__v": 0
+}]

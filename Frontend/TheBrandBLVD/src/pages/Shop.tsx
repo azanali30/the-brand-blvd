@@ -37,10 +37,10 @@ const Shop = () => {
         setError("");
 
         const url = selectedCategory
-          ? `http://localhost:5000/api/products?category=${encodeURIComponent(
+          ? `https://the-brand-blvd.onrender.com/api/products?category=${encodeURIComponent(
               selectedCategory
             )}`
-          : "http://localhost:5000/api/products";
+          : "https://the-brand-blvd.onrender.com/api/products";
 
         const response = await fetch(url);
 

@@ -63,7 +63,7 @@ const Orders = () => {
         setError("");
 
         const response = await fetch(
-  "http://localhost:5000/api/orders/my",
+  "https://the-brand-blvd.onrender.com/api/orders/my",
   {
     method: "GET",
     credentials: "include",

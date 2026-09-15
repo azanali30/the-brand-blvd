@@ -30,7 +30,7 @@ interface Category {
   isActive: boolean;
 }
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://the-brand-blvd.onrender.com";
 
 const Home: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);

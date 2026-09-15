@@ -88,7 +88,7 @@ const ProductDetails = () => {
       setCartMessage("");
 
       const response = await fetch(
-        "http://localhost:5000/api/cart",
+        "https://the-brand-blvd.onrender.com/api/cart",
         {
           method: "POST",
           headers: {
@@ -139,7 +139,7 @@ const ProductDetails = () => {
         setError("");
 
         const response = await fetch(
-          `http://localhost:5000/api/products/${id}`
+          `https://the-brand-blvd.onrender.com/api/products/${id}`
         );
 
         const data = await response.json();

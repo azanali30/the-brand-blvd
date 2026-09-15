@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   const refreshUser = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/me", {
+      const response = await fetch("https://the-brand-blvd.onrender.com/api/auth/me", {
         method: "GET",
         credentials: "include",
       });
@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   const logout = async () => {
     try {
-      await fetch("http://localhost:5000/api/auth/logout", {
+      await fetch("https://the-brand-blvd.onrender.com/api/auth/logout", {
         method: "POST",
         credentials: "include",
       });

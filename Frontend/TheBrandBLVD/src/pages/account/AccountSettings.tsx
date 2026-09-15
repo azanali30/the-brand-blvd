@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://the-brand-blvd.onrender.com";
 
 interface UserData {
   _id: string;

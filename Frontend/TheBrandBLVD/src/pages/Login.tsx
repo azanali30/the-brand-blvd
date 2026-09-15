@@ -20,13 +20,13 @@ const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
-    window.location.href = "http://localhost:5000/api/auth/google";
+    window.location.href = "https://the-brand-blvd.onrender.com/api/auth/google";
 
   setLoading(true);
   setError("");
 
   try {
-    const response = await fetch("http://localhost:5000/api/auth/login", {
+    const response = await fetch("https://the-brand-blvd.onrender.com/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ navigate("/");
 
   const handleGoogleLogin = () => {
     // Google authentication backend mein baad mein connect karenge
-  window.location.href = "http://localhost:5000/api/auth/google";
+  window.location.href = "https://the-brand-blvd.onrender.com/api/auth/google";
   };
 
   return (

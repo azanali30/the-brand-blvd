@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "6a9c5241187ba6da2ed88e95"
+  },
+  "user": {
+    "$oid": "6a9c2b455c3eec9c69dca419"
+  },
+  "items": [],
+  "createdAt": {
+    "$date": "2026-09-05T17:32:49.515Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T12:14:55.463Z"
+  },
+  "__v": 21
+},
+{
+  "_id": {
+    "$oid": "6a9c5862b98fbd117288d84f"
+  },
+  "user": {
+    "$oid": "6a9c486c2e13bd9f3c3b02d1"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "6a9c4b9d645f1d8e82f60f41"
+      },
+      "quantity": 1,
+      "size": "S",
+      "color": "Black"
+    },
+    {
+      "product": {
+        "$oid": "6a9c4b9d645f1d8e82f60f41"
+      },
+      "quantity": 1,
+      "size": "M",
+      "color": "Black"
+    }
+  ],
+  "createdAt": {
+    "$date": "2026-09-05T17:58:58.775Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-05T19:01:08.718Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "6aa3dfbde67eb10e365d0d28"
+  },
+  "user": {
+    "$oid": "6aa3dfa4e67eb10e365d0d27"
+  },
+  "items": [],
+  "createdAt": {
+    "$date": "2026-09-11T11:02:21.384Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T11:20:55.424Z"
+  },
+  "__v": 5
+},
+{
+  "_id": {
+    "$oid": "6aa5651560c64e4666addfb5"
+  },
+  "user": {
+    "$oid": "6aa54021f6540c1711654394"
+  },
+  "items": [],
+  "createdAt": {
+    "$date": "2026-09-12T14:43:33.128Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T14:48:55.098Z"
+  },
+  "__v": 1
+}]

@@ -9,7 +9,7 @@ import {
   User,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://the-brand-blvd.onrender.com";
 
 interface UserData {
   id: string;

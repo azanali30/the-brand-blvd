@@ -1,0 +1,506 @@
+[{
+  "_id": {
+    "$oid": "6a9c4be7645f1d8e82f60f49"
+  },
+  "name": "Royal Black Sherwani",
+  "description": "Luxurious traditional sherwani with refined detailing, designed for weddings and special occasions.",
+  "price": 34999,
+  "category": "Sherwani",
+  "images": [
+    "https://example.com/products/black-sherwani.jpg"
+  ],
+  "sizes": [
+    "36",
+    "38",
+    "40",
+    "42",
+    "44"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "stock": 5,
+  "isNewArrival": true,
+  "isFeatured": true,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-05T17:05:43.243Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T11:42:07.859Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa40476cf8fcb0b9119fc6a"
+  },
+  "name": "Premium Black 3-Piece Suit",
+  "description": "A sophisticated black 3-piece suit crafted for a sharp and timeless formal look.",
+  "price": 11000,
+  "category": "3-piece-suits",
+  "images": [
+    "https://vardo.co.in/cdn/shop/files/0H8A5039_1800x1800.jpg?v=1736320328"
+  ],
+  "sizes": [
+    "M",
+    "S",
+    "L",
+    "XL"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "stock": 4,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-09-11T13:39:02.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T13:39:02.559Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa4051dcf8fcb0b9119fc6b"
+  },
+  "name": "Premium Black 3-Piece Suit",
+  "description": "A sophisticated black 3-piece suit crafted for a sharp and timeless formal look.",
+  "price": 11000,
+  "category": "3-piece-suits",
+  "images": [
+    "https://vardo.co.in/cdn/shop/files/0H8A5039_1800x1800.jpg?v=1736320328"
+  ],
+  "sizes": [
+    "M"
+  ],
+  "colors": [
+    "Blackl"
+  ],
+  "stock": 10,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-11T13:41:49.703Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T13:41:49.703Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa4057fcf8fcb0b9119fc6c"
+  },
+  "name": "Premium Black 3-Piece Suit",
+  "description": "A sophisticated black 3-piece suit crafted for a sharp and timeless formal look.",
+  "price": 11000,
+  "category": "3-piece-suits",
+  "images": [
+    "https://vardo.co.in/cdn/shop/files/0H8A5039_1800x1800.jpg?v=1736320328"
+  ],
+  "sizes": [
+    "M",
+    "S",
+    "L"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "stock": 10,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-11T13:43:27.516Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T13:43:27.516Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa405cccf8fcb0b9119fc6d"
+  },
+  "name": "Premium Black 3-Piece Suit",
+  "description": "A sophisticated black 3-piece suit crafted for a sharp and timeless formal look.",
+  "price": 11000,
+  "category": "3-piece-suits",
+  "images": [
+    "https://vardo.co.in/cdn/shop/files/0H8A5039_1800x1800.jpg?v=1736320328"
+  ],
+  "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "stock": 10,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-11T13:44:44.278Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T13:44:44.278Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa4066ccf8fcb0b9119fc6e"
+  },
+  "name": "ndjqwdjkdhf",
+  "description": "afnwelflweerilg",
+  "price": 9500,
+  "category": "3-piece-suits",
+  "images": [
+    "https://vardo.co.in/cdn/shop/files/0H8A5039_1800x1800.jpg?v=1736320328"
+  ],
+  "sizes": [
+    "M"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "stock": 10,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-11T13:47:24.564Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T13:47:24.564Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa522d7ef8dee282a12b438"
+  },
+  "name": "Premium Black Shalwar Kameez",
+  "description": "Premium men's shalwar kameez designed with a clean and refined traditional look.",
+  "price": 8500,
+  "category": "shalwar-kameez",
+  "images": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDsFzFtbH0dTK4nX7nZnA0QFI38fJjFy5kQpFVPYvjfg&s=10"
+  ],
+  "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "stock": 0,
+  "isNewArrival": false,
+  "isFeatured": true,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-12T10:00:55.587Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T10:00:55.587Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa52319ef8dee282a12b439"
+  },
+  "name": "Premium Black Shalwar Kameez",
+  "description": "Premium men's shalwar kameez designed with a clean and refined traditional look.",
+  "price": 8500,
+  "category": "shalwar-kameez",
+  "images": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDsFzFtbH0dTK4nX7nZnA0QFI38fJjFy5kQpFVPYvjfg&s=10"
+  ],
+  "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "stock": 10,
+  "isNewArrival": false,
+  "isFeatured": true,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-12T10:02:01.507Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T10:02:01.507Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa5235fef8dee282a12b43a"
+  },
+  "name": "Premium Black Shalwar Kameez",
+  "description": "Premium men's shalwar kameez designed with a clean and refined traditional look.",
+  "price": 8500,
+  "category": "shalwar-kameez",
+  "images": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdoNF_pBz4Zvod7K-I2YGBIh6eU0xDob6UcLDDURsGoQ&s=10"
+  ],
+  "sizes": [
+    "S",
+    "M"
+  ],
+  "colors": [],
+  "stock": 25,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-12T10:03:11.852Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T10:03:11.852Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa523b5ef8dee282a12b43b"
+  },
+  "name": "Premium Black Shalwar Kameez",
+  "description": "Premium men's shalwar kameez designed with a clean and refined traditional look.",
+  "price": 8500,
+  "category": "shalwar-kameez",
+  "images": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdoNF_pBz4Zvod7K-I2YGBIh6eU0xDob6UcLDDURsGoQ&s=10"
+  ],
+  "sizes": [
+    "M"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "stock": 25,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-12T10:04:37.015Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T10:04:37.015Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa5250fef8dee282a12b43c"
+  },
+  "name": "Premium Black Shalwar Kameez",
+  "description": "Premium men's shalwar kameez designed for a refined traditional look.",
+  "price": 8500,
+  "category": "shalwar-kameez",
+  "images": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDsFzFtbH0dTK4nX7nZnA0QFI38fJjFy5kQpFVPYvjfg&s=10"
+  ],
+  "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "colors": [],
+  "stock": 10,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-12T10:10:23.794Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T10:10:23.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa5265bef8dee282a12b43d"
+  },
+  "name": "Premium Black Shalwar Kameez",
+  "description": "Premium men's shalwar kameez designed for a refined traditional look.",
+  "price": 6500,
+  "category": "shalwar-kameez",
+  "images": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuHUv1eM_yHHqrm3wLVsJ0t9naSk9ZBYykCzF7q86sgg&s=10"
+  ],
+  "sizes": [
+    "S"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "stock": 25,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-12T10:15:55.028Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T10:15:55.028Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa527faef8dee282a12b43e"
+  },
+  "name": "cnajkadhaukhui",
+  "description": "awldjweofhwefgukhguigheruigerhg",
+  "price": 8500,
+  "category": "shalwar-kameez",
+  "images": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuHUv1eM_yHHqrm3wLVsJ0t9naSk9ZBYykCzF7q86sgg&s=10"
+  ],
+  "sizes": [
+    "M",
+    "L",
+    "XL"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "stock": 25,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-12T10:22:50.199Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T10:22:50.199Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa52879ef8dee282a12b43f"
+  },
+  "name": "xvhdvjhwdgj",
+  "description": "awjdwjkfhjkfnj,nj,fjkheukfhukherghgherg",
+  "price": 6500,
+  "category": "shalwar-kameez",
+  "images": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuHUv1eM_yHHqrm3wLVsJ0t9naSk9ZBYykCzF7q86sgg&s=10"
+  ],
+  "sizes": [
+    "S"
+  ],
+  "colors": [
+    "25"
+  ],
+  "stock": 25,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-12T10:24:57.386Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T10:24:57.386Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa52a52ef8dee282a12b440"
+  },
+  "name": "jfwejkfhjkfhkf",
+  "description": "snjdnkjhekfhfukwhfukh",
+  "price": 8500,
+  "category": "shalwar-kameez",
+  "images": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuHUv1eM_yHHqrm3wLVsJ0t9naSk9ZBYykCzF7q86sgg&s=10"
+  ],
+  "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "stock": 25,
+  "isNewArrival": true,
+  "isFeatured": false,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-09-12T10:32:50.201Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T10:32:50.201Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa538f6f6540c1711654393"
+  },
+  "name": "Premium Black Shalwar Kameez",
+  "description": "A premium black shalwar kameez crafted with refined fabric and a clean traditional silhouette. Designed for a sophisticated and timeless look.",
+  "category": "shalwar-kameez",
+  "images": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuHUv1eM_yHHqrm3wLVsJ0t9naSk9ZBYykCzF7q86sgg&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3f-lVNXVvo9jAADFSLH2NRBQEHH0bkibnY62nbPOw8g&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwuFCHT-rsPk7-btlruHZp8sR2IH2yjqiatXwc2sgRSw&s"
+  ],
+  "variants": [
+    {
+      "size": "S",
+      "price": 5500,
+      "stock": 24
+    },
+    {
+      "size": "M",
+      "price": 5500,
+      "stock": 25
+    },
+    {
+      "size": "L",
+      "price": 6200,
+      "stock": 25
+    },
+    {
+      "size": "XL",
+      "price": 6800,
+      "stock": 15
+    }
+  ],
+  "colors": [
+    "Black"
+  ],
+  "isNewArrival": false,
+  "isFeatured": true,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-09-12T11:35:19.016Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-12T14:48:55.031Z"
+  },
+  "__v": 0
+}]

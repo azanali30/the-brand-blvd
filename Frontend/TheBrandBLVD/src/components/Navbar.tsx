@@ -54,7 +54,7 @@ const fetchCategories = async () => {
         setCategoriesLoading(true);
 
         const response = await fetch(
-          "http://localhost:5000/api/categories"
+          "https://the-brand-blvd.onrender.com/api/categories"
         );
 
         const data = await response.json();

@@ -59,7 +59,7 @@ const OrderDetails = () => {
         setLoading(true);
 
         const response = await fetch(
-          `http://localhost:5000/api/orders/${id}`,
+          `https://the-brand-blvd.onrender.com/api/orders/${id}`,
           {
             method: "GET",
             credentials: "include",
@@ -104,7 +104,7 @@ const OrderDetails = () => {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/orders/${order?._id}/cancel`,
+      `https://the-brand-blvd.onrender.com/api/orders/${order?._id}/cancel`,
       {
         method: "PUT",
         credentials: "include",

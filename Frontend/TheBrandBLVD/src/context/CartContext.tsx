@@ -47,7 +47,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/cart", {
+      const response = await fetch("https://the-brand-blvd.onrender.com/api/cart", {
         method: "GET",
         credentials: "include",
       });
