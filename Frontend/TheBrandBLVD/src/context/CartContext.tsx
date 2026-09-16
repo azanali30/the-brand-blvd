@@ -6,23 +6,40 @@ import {
   type ReactNode,
 } from "react";
 
-interface Product {
-  _id: string;
-  name: string;
+// ==========================================
+// TYPES
+// ==========================================
+
+export interface ProductVariant {
+  size: string;
   price: number;
-  category: string;
-  images: string[];
   stock: number;
 }
 
-interface CartItem {
+export interface Product {
+  _id: string;
+  name: string;
+  description?: string;
+  category: string;
+  images: string[];
+
+  variants: ProductVariant[];
+
+  colors: string[];
+
+  isNewArrival: boolean;
+  isFeatured: boolean;
+  isActive: boolean;
+}
+
+export interface CartItem {
   product: Product;
   quantity: number;
   size?: string;
   color?: string;
 }
 
-interface CartData {
+export interface CartData {
   items: CartItem[];
 }
 
@@ -39,18 +56,28 @@ interface CartProviderProps {
   children: ReactNode;
 }
 
+// ==========================================
+// PROVIDER
+// ==========================================
+
 export const CartProvider = ({ children }: CartProviderProps) => {
-  const [cart, setCart] = useState<CartData>({ items: [] });
+  const [cart, setCart] = useState<CartData>({
+    items: [],
+  });
+
   const [loading, setLoading] = useState(true);
 
   const refreshCart = async () => {
     try {
       setLoading(true);
 
-      const response = await fetch("https://the-brand-blvd.onrender.com/api/cart", {
-        method: "GET",
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://the-brand-blvd.onrender.com/api/cart",
+        {
+          method: "GET",
+          credentials: "include",
+        }
+      );
 
       const data = await response.json();
 
@@ -61,6 +88,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
       }
     } catch (error) {
       console.error("Fetch cart error:", error);
+
       setCart({ items: [] });
     } finally {
       setLoading(false);
@@ -89,6 +117,10 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     </CartContext.Provider>
   );
 };
+
+// ==========================================
+// HOOK
+// ==========================================
 
 export const useCart = () => {
   const context = useContext(CartContext);

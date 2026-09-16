@@ -2,40 +2,14 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Minus, Plus, Trash2, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
-import { useCart } from "../context/CartContext";
+import {
+  useCart,
+  type Product,
+  type ProductVariant,
+} from "../context/CartContext";
 
-// ==========================================
-// TYPES
-// ==========================================
 
-interface ProductVariant {
-  size: string;
-  price: number;
-  stock: number;
-}
 
-interface Product {
-  _id: string;
-  name: string;
-  category: string;
-  images: string[];
-  variants: ProductVariant[];
-  colors: string[];
-  isNewArrival: boolean;
-  isFeatured: boolean;
-  isActive: boolean;
-}
-
-interface CartItem {
-  product: Product;
-  quantity: number;
-  size?: string;
-  color?: string;
-}
-
-interface CartData {
-  items: CartItem[];
-}
 
 // ==========================================
 // HELPERS
