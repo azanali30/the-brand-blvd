@@ -44,11 +44,11 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
+      "https://the-brand-blvd-h97l.vercel.app",
     ],
     credentials: true,
   })
 );
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
