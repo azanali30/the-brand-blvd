@@ -63,7 +63,7 @@ interface DashboardData {
   customers: number;
 }
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://the-brand-blvd.onrender.com";
 
 const Dashboard = () => {
   const [stats, setStats] = useState<DashboardData>({

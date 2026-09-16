@@ -21,7 +21,7 @@ import type {
   PaymentStatus,
 } from "./types";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://the-brand-blvd.onrender.com";
 
 const statusConfig: Record<
   OrderStatus,

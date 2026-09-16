@@ -82,7 +82,7 @@ const EditProduct = () => {
     const fetchCategories = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/categories"
+          "http://https://the-brand-blvd.onrender.com/api/categories"
         );
 
         const data = await response.json();
@@ -108,7 +108,7 @@ const EditProduct = () => {
         setLoadingProduct(true);
 
         const response = await fetch(
-          `http://localhost:5000/api/products/admin/${id}`
+          `http://https://the-brand-blvd.onrender.com/api/products/admin/${id}`
         );
 
         const data = await response.json();
@@ -373,7 +373,7 @@ const EditProduct = () => {
       console.log("UPDATE PRODUCT DATA:", productData);
 
       const response = await fetch(
-        `http://localhost:5000/api/products/${id}`,
+        `http://https://the-brand-blvd.onrender.com/api/products/${id}`,
         {
           method: "PUT",
           headers: {

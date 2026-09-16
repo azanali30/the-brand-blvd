@@ -1,4 +1,4 @@
-import { FormEent, useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Lock, Mail, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +22,7 @@ const Login = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+        "https://the-brand-blvd.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {

@@ -31,7 +31,7 @@ const Categories = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/categories"
+        "http://https://the-brand-blvd.onrender.com/api/categories"
       );
 
       const data = await response.json();
@@ -57,7 +57,7 @@ const Categories = () => {
   const handleDelete = async (id: string) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/categories/${id}`,
+        `http://https://the-brand-blvd.onrender.com/api/categories/${id}`,
         {
           method: "DELETE",
         }

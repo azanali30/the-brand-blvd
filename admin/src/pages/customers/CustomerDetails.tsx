@@ -43,7 +43,7 @@ interface Order {
   createdAt?: string;
 }
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://the-brand-blvd.onrender.com";
 
 const CustomerDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();

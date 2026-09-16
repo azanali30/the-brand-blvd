@@ -73,7 +73,7 @@ const Sidebar = ({
       setLoggingOut(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/logout",
+        "http://https://the-brand-blvd.onrender.com/api/auth/logout",
         {
           method: "POST",
           credentials: "include",
@@ -245,7 +245,7 @@ const Sidebar = ({
 
           {/* View Store */}
           <a
-            href="http://localhost:5173"
+            href="https://the-brand-blvd.onrender.com"
             target="_blank"
             rel="noreferrer"
             className={`flex items-center gap-3 px-3 py-3 text-xs text-white/55 transition-colors hover:bg-white/5 hover:text-white ${

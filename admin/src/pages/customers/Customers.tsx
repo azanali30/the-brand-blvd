@@ -19,7 +19,7 @@ interface Customer {
   isActive?: boolean;
 }
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://the-brand-blvd.onrender.com";
 
 const Customers: React.FC = () => {
   const [customers, setCustomers] = useState<Customer[]>([]);

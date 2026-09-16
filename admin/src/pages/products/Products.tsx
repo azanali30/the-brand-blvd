@@ -39,7 +39,7 @@ const Products = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/products"
+        "http://https://the-brand-blvd.onrender.com/api/products"
       );
 
       const data = await response.json();
@@ -61,7 +61,7 @@ const Products = () => {
   const handleDelete = async (id: string) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/products/${id}`,
+        `http://https://the-brand-blvd.onrender.com/api/products/${id}`,
         {
           method: "DELETE",
         }

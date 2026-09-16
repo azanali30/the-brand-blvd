@@ -9,7 +9,7 @@ const ProtectedRoute = () => {
     const checkAdmin = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/auth/me",
+          "https://the-brand-blvd.onrender.com/api/auth/me",
           {
             method: "GET",
             credentials: "include",
