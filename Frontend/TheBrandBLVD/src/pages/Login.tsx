@@ -59,9 +59,10 @@ const Login = () => {
   };
 
   const handleGoogleLogin = () => {
-    window.location.href =
-      "https://the-brand-blvd.onrender.com/api/auth/google";
-  };
+  window.location.assign(
+    "https://the-brand-blvd.onrender.com/api/auth/google"
+  );
+};
 
   return (
     <section className="min-h-[80vh] bg-white px-6 py-16 text-black md:px-10 lg:px-14">
