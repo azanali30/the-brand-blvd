@@ -5,6 +5,13 @@ import cookieParser from "cookie-parser";
 
 dotenv.config();
 
+console.log("GOOGLE_CLIENT_ID:", process.env.GOOGLE_CLIENT_ID);
+console.log(
+  "GOOGLE_CLIENT_SECRET:",
+  process.env.GOOGLE_CLIENT_SECRET ? "LOADED" : "MISSING"
+);
+console.log("GOOGLE_CALLBACK_URL:", process.env.GOOGLE_CALLBACK_URL);
+
 
 import authRoutes from "./routes/authRoutes";
 import productRoutes from "./routes/productRoutes";
