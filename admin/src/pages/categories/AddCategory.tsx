@@ -92,7 +92,7 @@ const AddCategory = () => {
     setNotification(null);
 
     const response = await fetch(
-      "http://https://the-brand-blvd.onrender.com/api/categories",
+      "https://the-brand-blvd.onrender.com/api/categories",
       {
         method: "POST",
         headers: {

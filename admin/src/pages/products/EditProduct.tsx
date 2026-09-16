@@ -373,7 +373,7 @@ const EditProduct = () => {
       console.log("UPDATE PRODUCT DATA:", productData);
 
       const response = await fetch(
-        `http://https://the-brand-blvd.onrender.com/api/products/${id}`,
+        `https://the-brand-blvd.onrender.com/api/products/${id}`,
         {
           method: "PUT",
           headers: {

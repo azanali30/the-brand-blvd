@@ -227,7 +227,7 @@ const AddProduct = () => {
       console.log("PRODUCT DATA:", productData);
 
       const response = await fetch(
-        "http://https://the-brand-blvd.onrender.com/api/products",
+        "https://the-brand-blvd.onrender.com/api/products",
         {
           method: "POST",
           headers: {

@@ -73,7 +73,7 @@ const Sidebar = ({
       setLoggingOut(true);
 
       const response = await fetch(
-        "http://https://the-brand-blvd.onrender.com/api/auth/logout",
+        "https://the-brand-blvd.onrender.com/api/auth/logout",
         {
           method: "POST",
           credentials: "include",

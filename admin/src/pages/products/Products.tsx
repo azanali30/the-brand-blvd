@@ -39,7 +39,7 @@ const Products = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://https://the-brand-blvd.onrender.com/api/products"
+        "https://the-brand-blvd.onrender.com/api/products"
       );
 
       const data = await response.json();
@@ -61,7 +61,7 @@ const Products = () => {
   const handleDelete = async (id: string) => {
     try {
       const response = await fetch(
-        `http://https://the-brand-blvd.onrender.com/api/products/${id}`,
+        `https://the-brand-blvd.onrender.com/api/products/${id}`,
         {
           method: "DELETE",
         }
@@ -199,7 +199,7 @@ const Products = () => {
         </div>
 
         <Link
-          to="/products/new"
+          to="/products/add"
           className="flex items-center justify-center gap-2 bg-black px-5 py-3 text-[10px] font-medium uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-80"
         >
           <Plus
