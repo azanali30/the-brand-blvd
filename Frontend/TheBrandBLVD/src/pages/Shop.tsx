@@ -24,8 +24,9 @@ interface Product {
 const Shop = () => {
   const [searchParams] = useSearchParams();
 
-  const selectedCategory = searchParams.get("category");
-
+const selectedCategory =
+  searchParams.get("category") ?? undefined;
+  
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

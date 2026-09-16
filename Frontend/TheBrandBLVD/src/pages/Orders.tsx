@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, Package, ChevronRight } from "lucide-react";
+import { Package, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface OrderItem {

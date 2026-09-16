@@ -4,63 +4,63 @@ import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 
-
-
-
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-const [email, setEmail] = useState("");
-const [password, setPassword] = useState("");
-const [loading, setLoading] = useState(false);
-const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
-
   const { refreshUser } = useAuth();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-    window.location.href = "https://the-brand-blvd.onrender.com/api/auth/google";
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
 
-  setLoading(true);
-  setError("");
+    setLoading(true);
+    setError("");
 
-  try {
-    const response = await fetch("https://the-brand-blvd.onrender.com/api/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    });
+    try {
+      const response = await fetch(
+        "https://the-brand-blvd.onrender.com/api/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify({
+            email,
+            password,
+          }),
+        }
+      );
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (!response.ok) {
-  setError(data.message || "Login failed");
-  return;
-}
+      if (!response.ok) {
+        setError(data.message || "Login failed");
+        return;
+      }
 
-console.log("Login successful:", data);
+      console.log("Login successful:", data);
 
-await refreshUser();
+      await refreshUser();
 
-navigate("/");
-  } catch (error) {
-    console.error("Login error:", error);
-    setError("Unable to connect to the server");
-  } finally {
-    setLoading(false);
-  }
-};
+      navigate("/");
+    } catch (error) {
+      console.error("Login error:", error);
+      setError("Unable to connect to the server");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleGoogleLogin = () => {
-    // Google authentication backend mein baad mein connect karenge
-  window.location.href = "https://the-brand-blvd.onrender.com/api/auth/google";
+    window.location.href =
+      "https://the-brand-blvd.onrender.com/api/auth/google";
   };
 
   return (
@@ -103,7 +103,6 @@ navigate("/");
             whileTap={{ scale: 0.98 }}
             className="flex w-full items-center justify-center gap-3 bg-[#f8f8f8] px-6 py-4 text-xs font-medium uppercase tracking-[0.18em] text-black transition-colors duration-300 hover:bg-[#f1f1f1]"
           >
-            {/* Google Icon */}
             <svg
               width="18"
               height="18"
@@ -131,6 +130,13 @@ navigate("/");
             <div className="h-px flex-1 bg-black/10" />
           </div>
 
+          {/* Error */}
+          {error && (
+            <div className="mb-6 bg-red-50 px-4 py-3 text-center text-xs text-red-600">
+              {error}
+            </div>
+          )}
+
           {/* Email */}
           <div>
             <label
@@ -141,14 +147,15 @@ navigate("/");
             </label>
 
             <input
-  id="email"
-  type="email"
-  placeholder="Enter your email"
-  required
-  value={email}
-  onChange={(e) => setEmail(e.target.value)}
-  className="w-full bg-[#f8f8f8] px-4 py-4 text-sm outline-none transition-colors duration-300 placeholder:text-black/30 focus:bg-[#f1f1f1]"
-/>
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={loading}
+              className="w-full bg-[#f8f8f8] px-4 py-4 text-sm outline-none transition-colors duration-300 placeholder:text-black/30 focus:bg-[#f1f1f1] disabled:cursor-not-allowed disabled:opacity-50"
+            />
           </div>
 
           {/* Password */}
@@ -170,25 +177,30 @@ navigate("/");
             </div>
 
             <input
-  id="password"
-  type="password"
-  placeholder="Enter your password"
-  required
-  value={password}
-  onChange={(e) => setPassword(e.target.value)}
-  className="w-full bg-[#f8f8f8] px-4 py-4 text-sm outline-none transition-colors duration-300 placeholder:text-black/30 focus:bg-[#f1f1f1]"
-/>
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              disabled={loading}
+              className="w-full bg-[#f8f8f8] px-4 py-4 text-sm outline-none transition-colors duration-300 placeholder:text-black/30 focus:bg-[#f1f1f1] disabled:cursor-not-allowed disabled:opacity-50"
+            />
           </div>
 
           {/* Sign In Button */}
           <motion.button
             type="submit"
-            whileHover={{ scale: 1.01 }}
-            whileTap={{ scale: 0.98 }}
-            className="mt-8 flex w-full items-center justify-center gap-3 bg-black px-6 py-4 text-xs font-medium uppercase tracking-[0.2em] text-white"
+            disabled={loading}
+            whileHover={{ scale: loading ? 1 : 1.01 }}
+            whileTap={{ scale: loading ? 1 : 0.98 }}
+            className="mt-8 flex w-full items-center justify-center gap-3 bg-black px-6 py-4 text-xs font-medium uppercase tracking-[0.2em] text-white transition-opacity disabled:cursor-not-allowed disabled:opacity-50"
           >
-            Sign In
-            <ArrowRight size={16} strokeWidth={1.5} />
+            {loading ? "Signing In..." : "Sign In"}
+
+            {!loading && (
+              <ArrowRight size={16} strokeWidth={1.5} />
+            )}
           </motion.button>
         </motion.form>
 
